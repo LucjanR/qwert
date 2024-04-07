@@ -7,6 +7,7 @@ void menu(void) {
     printf("2 - Subtract\n");
     printf("3 - Multiply\n");
     printf("4 - Divide\n");
+    printf("5 - Square\n");
     printf("Select an option:\n");
 }
 
@@ -55,7 +56,7 @@ int main() {
                 if (number2!= 0) {
                     result = number1 / number2;
                     printf("%d / %d = %d\n", number1, number2, result);
-                } else {
+                }else {
                     if (number1 == 0) {
                         printf("%d / %d = NaN\n", number1, number2);
                     } else if (number1 > 0) {
@@ -64,6 +65,14 @@ int main() {
                         printf("%d / %d = -INF\n", number1, number2);
                     }
                 }
+                break;
+            case 5:
+                printf("Square");
+                enterNumbers(&number1, &number2);
+                result = number1 * number1;
+                printf("%d * %d = %d\n", number1, number1, result);
+
+
                 break;
             default:
                 printf("Choose the right option...\n\n");
