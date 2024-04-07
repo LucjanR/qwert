@@ -10,10 +10,19 @@ void menu(void) {
     printf("Select an option:\n");
 }
 
+void enterNumbers(int *number1, int *number2) {
+    printf("Enter first number: ");
+    scanf("%d", number1);
+    printf("Enter second number: ");
+    scanf("%d", number2);
+}
+
 int main() {
     std::cout << "Hello, World!" << std::endl;
     int option = 0;
-
+    int number1 = 0;
+    int number2 = 0;
+    int result = 0;
     printf("Simple Calc\n");
 
     do {
@@ -24,6 +33,9 @@ int main() {
                 break;
             case 1:
                 printf("Adding");
+                enterNumbers(&number1, &number2);
+                result = number1 + number2;
+                printf("%d + %d = %d\n", number1, number2, result);
                 break;
             case 2:
                 printf("Subtracting");
